@@ -1,21 +1,35 @@
 <header>
   <nav>
-    <a routerLink="/" routerLinkActive="active">Inicio</a>
-    <a routerLink="/contact" routerLinkActive="active">Contacto</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-6">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-gray-900">UTN Store</h1>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Inicio</a>
+            <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
 </header>
+
 <main>
   <router-outlet></router-outlet>
 </main>
+
 <footer>
-  <div>
-    <h3>TechStore</h3>
-    <p>Tu tienda de confianza para productos tecnológicos de alta calidad.</p>
-    <ul>
-      <li><a routerLink="/">Inicio</a></li>
-      <li><a routerLink="/contact">Contacto</a></li>
-    </ul>
-    <p>📧 info&#64;techstore.com<br>📞 +1 (555) 123-4567</p>
-    <p>&copy; 2024 TechStore. Todos los derechos reservados.</p>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">UTN Store</h3>
+      <p class="text-gray-600 mb-4">Tu tienda de tecnología de confianza</p>
+      <ul class="flex justify-center space-x-6">
+        <li><a href="#" class="text-gray-600 hover:text-gray-900">Términos</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-gray-900">Privacidad</a></li>
+        <li><a href="#" class="text-gray-600 hover:text-gray-900">Soporte</a></li>
+      </ul>
+    </div>
   </div>
 </footer> 

@@ -1,6 +1,10 @@
 <div class="app-product-card">
-  <img [src]="product.image" [alt]="product.name">
-  <h3>{{ product.name }}</h3>
-  <div class="price">${{ product.price }}</div>
-  <a [routerLink]="['/product', product.id]" class="btn">Ver Detalles</a>
+  <img [src]="product.image" [alt]="product.name" class="product-image">
+  <div class="product-info">
+    <h3>{{ product.name }}</h3>
+    <div class="price">${{ product.price }}</div>
+    <div class="stock" *ngIf="product.stock > 0">En Stock ({{ product.stock }})</div>
+    <div class="out-stock" *ngIf="product.stock === 0">Agotado</div>
+    <a [routerLink]="['/product', product.id]" class="btn">Ver Detalles</a>
+  </div>
 </div> 

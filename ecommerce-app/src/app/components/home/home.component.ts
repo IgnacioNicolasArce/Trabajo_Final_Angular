@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { Product } from '../../models/product.model';
-import { ProductService } from '../../services/product.service';
+import { RouterLink } from '@angular/router';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, ProductCardComponent],
+  imports: [CommonModule, RouterLink, ProductCardComponent],
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
@@ -23,12 +23,16 @@ export class HomeComponent implements OnInit {
   }
 
   loadProducts(): void {
+    this.loading = true;
+    this.error = false;
+    
     this.productService.getProducts().subscribe({
       next: (products) => {
         this.products = products;
         this.loading = false;
       },
-      error: () => {
+      error: (error) => {
+        console.error('Error loading products:', error);
         this.error = true;
         this.loading = false;
       }
