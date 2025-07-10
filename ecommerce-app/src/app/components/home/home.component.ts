@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
@@ -8,7 +7,7 @@ import { Product } from '../../models/product.model';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, ProductCardComponent],
+  imports: [CommonModule, ProductCardComponent],
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
