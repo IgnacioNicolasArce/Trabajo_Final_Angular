@@ -1,0 +1,64 @@
+<!-- Loading State -->
+<div *ngIf="loading" class="text-center py-20">
+  <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  <span class="ml-3 text-gray-600">Cargando producto...</span>
+</div>
+
+<!-- Error State -->
+<div *ngIf="error" class="text-center py-20">
+  <div class="text-red-600 text-6xl mb-4">⚠️</div>
+  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+    Producto no encontrado
+  </h3>
+  <button (click)="goBack()" class="product-detail-info actions btn secondary">Volver al Inicio</button>
+</div>
+
+<!-- Product Detail -->
+<div *ngIf="!loading && !error && product">
+  <div class="product-detail-container">
+    <div class="product-detail-image">
+      <img [src]="product.image" [alt]="product.name">
+    </div>
+    <div class="product-detail-info">
+      <h1>{{ product.name }}</h1>
+      <div class="price">${{ product.price }}</div>
+      <div *ngIf="product.stock > 0" class="stock">En Stock ({{ product.stock }})</div>
+      <div *ngIf="product.stock === 0" class="out-stock">Agotado</div>
+      <div class="desc">{{ product.description }}</div>
+      <div class="specs" *ngIf="product.specifications">
+        <div *ngIf="product.specifications.brand"><b>Marca:</b> {{ product.specifications.brand }}</div>
+        <div *ngIf="product.specifications.model"><b>Modelo:</b> {{ product.specifications.model }}</div>
+        <div *ngIf="product.specifications.color"><b>Color:</b> {{ product.specifications.color }}</div>
+        <div *ngIf="product.specifications.size"><b>Tamaño:</b> {{ product.specifications.size }}</div>
+        <div *ngIf="product.specifications.weight"><b>Peso:</b> {{ product.specifications.weight }}</div>
+        <div *ngIf="product.specifications.material"><b>Material:</b> {{ product.specifications.material }}</div>
+      </div>
+      <div class="actions">
+        <button *ngIf="product.stock > 0">🛒 Agregar al Carrito</button>
+        <button *ngIf="product.stock === 0" disabled class="btn secondary">Agotado</button>
+        <button (click)="goBack()" class="btn secondary">← Volver</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de beneficios -->
+  <div class="benefits-section">
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="icon">🚚</span>
+        <h3>Envío Gratis</h3>
+        <p>En compras superiores a $50.000. Entrega en 24-48 horas en todo el país.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon">🛡️</span>
+        <h3>Garantía</h3>
+        <p>1 año de garantía oficial. Devolución gratuita en los primeros 30 días.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon">💬</span>
+        <h3>Soporte 24/7</h3>
+        <p>Atención al cliente disponible las 24 horas. Chat en vivo y WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</div> 

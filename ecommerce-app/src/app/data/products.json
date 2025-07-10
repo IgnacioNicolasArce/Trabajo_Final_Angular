@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro",
+    "description": "El iPhone 15 Pro cuenta con el chip A17 Pro, cámara de 48MP, y diseño en titanio. La experiencia más avanzada de iPhone hasta ahora.",
+    "price": 999.99,
+    "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=400&fit=crop",
+    "category": "Electrónicos",
+    "stock": 25,
+    "rating": 4.8,
+    "reviews": 1247,
+    "specifications": {
+      "brand": "Apple",
+      "model": "iPhone 15 Pro",
+      "color": "Titanio Natural",
+      "size": "6.1 pulgadas",
+      "weight": "187g",
+      "material": "Titanio"
+    }
+  },
+  {
+    "id": 2,
+    "name": "MacBook Air M2",
+    "description": "MacBook Air con chip M2, hasta 18 horas de batería y diseño ultraligero. Perfecto para trabajo y creatividad.",
+    "price": 1199.99,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=400&fit=crop",
+    "category": "Computadoras",
+    "stock": 15,
+    "rating": 4.9,
+    "reviews": 892,
+    "specifications": {
+      "brand": "Apple",
+      "model": "MacBook Air M2",
+      "color": "Space Gray",
+      "size": "13.6 pulgadas",
+      "weight": "1.24kg",
+      "material": "Aluminio"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM5",
+    "description": "Auriculares inalámbricos con cancelación de ruido líder en la industria. Calidad de sonido excepcional y hasta 30 horas de batería.",
+    "price": 349.99,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    "category": "Audio",
+    "stock": 30,
+    "rating": 4.7,
+    "reviews": 2156,
+    "specifications": {
+      "brand": "Sony",
+      "model": "WH-1000XM5",
+      "color": "Negro",
+      "size": "Universal",
+      "weight": "250g",
+      "material": "Plástico Premium"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Nike Air Max 270",
+    "description": "Zapatillas deportivas con tecnología Air Max para máxima comodidad y estilo. Ideales para running y uso diario.",
+    "price": 129.99,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+    "category": "Calzado",
+    "stock": 45,
+    "rating": 4.6,
+    "reviews": 3421,
+    "specifications": {
+      "brand": "Nike",
+      "model": "Air Max 270",
+      "color": "Blanco/Negro",
+      "size": "7-12 US",
+      "weight": "320g",
+      "material": "Malla y Goma"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Samsung 65\" QLED 4K",
+    "description": "TV QLED 4K con tecnología Quantum Dot para colores vibrantes y HDR. Experiencia de visualización inmersiva.",
+    "price": 1299.99,
+    "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop",
+    "category": "TV y Audio",
+    "stock": 8,
+    "rating": 4.8,
+    "reviews": 567,
+    "specifications": {
+      "brand": "Samsung",
+      "model": "QN65Q80B",
+      "color": "Negro",
+      "size": "65 pulgadas",
+      "weight": "24.3kg",
+      "material": "Plástico y Metal"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Canon EOS R6",
+    "description": "Cámara mirrorless full-frame con estabilización de imagen de 5 ejes y grabación de video 4K. Perfecta para fotografía profesional.",
+    "price": 2499.99,
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&h=400&fit=crop",
+    "category": "Fotografía",
+    "stock": 12,
+    "rating": 4.9,
+    "reviews": 423,
+    "specifications": {
+      "brand": "Canon",
+      "model": "EOS R6",
+      "color": "Negro",
+      "size": "138 x 98 x 88mm",
+      "weight": "680g",
+      "material": "Magnesio"
+    }
+  }
+] 

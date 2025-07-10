@@ -1,0 +1,66 @@
+<!-- Hero Section -->
+<!-- (Eliminado el bloque de bienvenida y botón de contacto) -->
+
+<!-- Products Section -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        Nuestros Productos Destacados
+      </h2>
+      <p class="text-lg text-gray-600">
+        Encuentra la tecnología que necesitas para tu día a día
+      </p>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="flex justify-center items-center py-20">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      <span class="ml-3 text-gray-600">Cargando productos...</span>
+    </div>
+
+    <!-- Error State -->
+    <div *ngIf="error" class="text-center py-20">
+      <div class="text-red-600 text-6xl mb-4">⚠️</div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">
+        Error al cargar productos
+      </h3>
+      <p class="text-gray-600 mb-4">
+        No pudimos cargar los productos. Por favor, intenta de nuevo.
+      </p>
+      <button (click)="loadProducts()" 
+              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+        Reintentar
+      </button>
+    </div>
+
+    <!-- Products Grid -->
+    <div *ngIf="!loading && !error" class="products-grid">
+      <app-product-card 
+        *ngFor="let product of products" 
+        [product]="product">
+      </app-product-card>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de beneficios -->
+<div class="benefits-section">
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <span class="icon">🚚</span>
+      <h3>Envío Gratis</h3>
+      <p>En compras superiores a $50.000. Entrega en 24-48 horas en todo el país.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="icon">🛡️</span>
+      <h3>Garantía</h3>
+      <p>1 año de garantía oficial. Devolución gratuita en los primeros 30 días.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="icon">💬</span>
+      <h3>Soporte 24/7</h3>
+      <p>Atención al cliente disponible las 24 horas. Chat en vivo y WhatsApp.</p>
+    </div>
+  </div>
+</div> 
